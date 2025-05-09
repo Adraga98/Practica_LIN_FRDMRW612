@@ -1,0 +1,5 @@
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxClMemory\inc/internal/mcuxClMemory_Copy_Internal.h:64:66:mcuxClMemory_copy_int	64	static
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxClBuffer\inc/internal/mcuxClBuffer_Internal_Pointer.h:85:66:mcuxClBuffer_read	72	static
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxClBuffer\inc/internal/mcuxClBuffer_Internal_Pointer.h:198:66:mcuxClBuffer_write	72	static
+../component/els_pkc/src/comps/mcuxClBuffer/src/mcuxClBuffer.c:30:52:mcuxClBuffer_export	72	static
+../component/els_pkc/src/comps/mcuxClBuffer/src/mcuxClBuffer.c:40:52:mcuxClBuffer_import	72	static
