@@ -28,7 +28,9 @@ static uint8_t BufferRxData[16] = {0U};
 
 static bool Header_flag = false;
 static bool Data_flag = false;
-static stResponseData Msgs[TOTAL_MSGS_RX] = MSG_RESPONSE_TABLE;
+static stResponseData Msgs[TOTAL_MSGS_RX_RESP] = MSG_RESPONSE_TABLE;
+static uint8_t Msgs_Storage[TOTAL_MSGS_RX_STORE] = MSG_STORAGE_TABLE;
+static bool Found_Flag = false;
 /*******************************************************************************
  * Code
  ******************************************************************************/
@@ -63,6 +65,7 @@ void MsgRx_Callback(void* data, uint8_t length)
 int main(void)
 {
 	uint8_t MsgId = 0U;
+	uint8_t CheckSum_State = 0U;
 
     BOARD_InitHardware();
     LIN_vInit();
@@ -75,15 +78,40 @@ int main(void)
     		Header_flag = false;
     		MsgId = LIN_u8GetMsgId(BufferRxFrame.IDMsg);
 
-    		for(uint8_t u8i = 0; u8i < TOTAL_MSGS_RX; u8i++)
+    		for(uint8_t u8i = 0; u8i < TOTAL_MSGS_RX_STORE; u8i++)
     		{
-    			if(MsgId == Msgs[u8i].Id)
-    			{
-    				PRINTF("Respuesta enviada: %s\r\n", Msgs[u8i].Response);
-    				LIN_vTxMsg(Msgs[u8i].Response, sizeof(Msgs[u8i].Response));
+    			if(MsgId == Msgs_Storage[u8i])
+				{
+					Found_Flag = true;
 					break;
-    			}
+				}
+    		}
+
+    		if(Found_Flag == false)
+    		{
+    			for(uint8_t u8i = 0; u8i < TOTAL_MSGS_RX_RESP; u8i++)
+				{
+					if(MsgId == Msgs[u8i].Id)
+					{
+						PRINTF("Respuesta enviada: %s\r\n", Msgs[u8i].Response);
+						LIN_vTxMsg(Msgs[u8i].Response, sizeof(Msgs[u8i].Response));
+						break;
+					}
+				}
+    			Data_flag = false;
     		}
     	}
+    	else if((Found_Flag)&&(Data_flag))
+		{
+	       	Data_flag = false;
+	       	Found_Flag = false;
+
+			CheckSum_State = LIN_u8Checksum(BufferRxData, 8);
+
+			if(CheckSum_State)
+			{
+				PRINTF("Respuesta recibida: %s \r\n", BufferRxData);
+			}
+		}
     }
 }

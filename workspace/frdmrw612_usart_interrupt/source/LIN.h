@@ -15,14 +15,16 @@
 #define USART_IRQn       	  FLEXCOMM0_IRQn
 
 #define MSG_IDS_MASTER 			{0}
-#define TOTAL_MSGS_RX			(2)
+#define TOTAL_MSGS_RX_RESP		(1)
+#define TOTAL_MSGS_RX_STORE		(1)
 #define TOTAL_MSGS_TX			(0)
 
 #define MSG_RESPONSE_TABLE \
 {	\
-	{0x7, "SERGIO"},	\
 	{0xF, "ADRIANA"},	\
 }
+
+#define MSG_STORAGE_TABLE 		{0xB}
 
 typedef void (*lin_msg_callback)(void*, uint8_t);
 

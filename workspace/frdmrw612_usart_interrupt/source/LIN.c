@@ -43,6 +43,7 @@ void USART_IRQHandler(void)
 {
     static bool FlagBreak = false;
     static uint8_t byte = 0U;
+    USART_Type *base = USART_BASE;
 	uint8_t data;
     uint8_t buffer[10];
 
