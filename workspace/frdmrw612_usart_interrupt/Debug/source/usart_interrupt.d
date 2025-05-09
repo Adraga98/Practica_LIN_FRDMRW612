@@ -90,7 +90,8 @@ source/usart_interrupt.o source/usart_interrupt.d: \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\drivers/fsl_gpio.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\board/app.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\drivers/fsl_usart.h \
- ../source/LIN.h
+ ../source/LIN.h \
+ C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\utilities\debug_console_lite/fsl_debug_console.h
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\source\mcux_config.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\board/board.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\drivers/fsl_common.h:
@@ -182,3 +183,4 @@ C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\drivers/fsl_gpio.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\board/app.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\drivers/fsl_usart.h:
 ../source/LIN.h:
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\utilities\debug_console_lite/fsl_debug_console.h:

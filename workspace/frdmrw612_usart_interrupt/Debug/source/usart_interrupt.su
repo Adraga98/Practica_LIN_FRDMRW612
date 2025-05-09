@@ -1,8 +1,2 @@
-C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\CMSIS/core_cm33.h:2555:22:__NVIC_SetPriority	16	static
-C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\CMSIS/core_cm33.h:3108:26:SysTick_Config	16	static
-../source/usart_interrupt.c:38:6:GPIO_INTA_DriverIRQHandler	8	static
-../source/usart_interrupt.c:63:6:SysTick_Handler	4	static
-../source/usart_interrupt.c:75:13:SysTick_Init	16	static
-../source/usart_interrupt.c:86:6:MsgFrameSent_callback	16	static
-../source/usart_interrupt.c:91:6:MsgRx_Callback	32	static
-../source/usart_interrupt.c:122:5:main	48	static
+../source/usart_interrupt.c:35:6:MsgRx_Callback	32	static
+../source/usart_interrupt.c:63:5:main	16	static

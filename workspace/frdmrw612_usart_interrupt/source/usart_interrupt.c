@@ -9,8 +9,8 @@
 #include "board.h"
 #include "app.h"
 #include "fsl_usart.h"
-#include "fsl_gpio.h"
 #include "LIN.h"
+#include "fsl_debug_console.h"
 
 /*******************************************************************************
  * Definitions
@@ -23,71 +23,15 @@
 /*******************************************************************************
  * Variables
  ******************************************************************************/
-
-uint8_t Msgs[TOTAL_MSGS] = MSG_IDS;
-static bool SendMsg = false;
-static uint8_t Index = 0U;
-static uint32_t counter = 0U;
-static uint32_t counter2 = 0U;
 static stLinMsg BufferRxFrame = {0U};
 static uint8_t BufferRxData[16] = {0U};
 
+static bool Header_flag = false;
+static bool Data_flag = false;
+static stResponseData Msgs[TOTAL_MSGS_RX] = MSG_RESPONSE_TABLE;
 /*******************************************************************************
  * Code
  ******************************************************************************/
-void GPIO_INTA_DriverIRQHandler(void)
-{
-    /* clear the interrupt status */
-    GPIO_PinClearInterruptFlag(GPIO, 0, 20, 0);
-    /* Change state of switch. */
-
-    if(counter > counter2)
-    {
-    	if((counter - counter2) > 10)
-		{
-			SendMsg = true;
-
-			Index = Index < (TOTAL_MSGS - 1) ? Index+1 : 0U;
-
-			counter2 = counter;
-		}
-    }
-    else
-    {
-    	counter2 = counter;
-    }
-
-    SDK_ISR_EXIT_BARRIER;
-}
-
-void SysTick_Handler(void)
-{
-	if(counter < 500000)
-	{
-		counter++;
-	}
-	else
-	{
-		counter = 0;
-	}
-}
-
-static void SysTick_Init(void)
-{
-	uint32_t coreClock = 0U;
-	uint32_t tickRate = 0U;
-
-	coreClock = CLOCK_GetCoreSysClkFreq();
-	tickRate = coreClock / 1000;
-
-    SysTick_Config(tickRate);
-}
-
-bool MsgFrameSent_callback(bool State)
-{
-	return State;
-}
-
 void MsgRx_Callback(void* data, uint8_t length)
 {
 	stLinMsg* Buff = (stLinMsg*)data;
@@ -98,10 +42,9 @@ void MsgRx_Callback(void* data, uint8_t length)
 	{
 		BufferRxFrame.Break = Buff->Break;
 		BufferRxFrame.SynchByte = Buff->SynchByte;
-		for(BufferIndex = 0U; BufferIndex < length; BufferIndex++)
-		{
-			BufferRxFrame.Buffer[BufferIndex] = Buff->Buffer[BufferIndex];
-		}
+		BufferRxFrame.IDMsg = Buff->IDMsg;
+
+		Header_flag = true;
 	}
 	else
 	{
@@ -109,38 +52,38 @@ void MsgRx_Callback(void* data, uint8_t length)
 		{
 			BufferRxData[BufferIndex] = BuffData[BufferIndex];
 		}
+
+		Data_flag = true;
 	}
-
-
-	asm("NOP");
 }
-
 
 /*!
  * @brief Main function
  */
 int main(void)
 {
-    usart_config_t config;
+	uint8_t MsgId = 0U;
 
     BOARD_InitHardware();
-
-    SysTick_Init();
-
     LIN_vInit();
 
     LIN_vInstallMsgRxCB((lin_msg_callback)&MsgRx_Callback);
-    LIN_vInstallMsgFrameCB((lin_msgframe_callback)&MsgFrameSent_callback);
-
     while(1)
     {
-        if(SendMsg == true)
-        {
-        	SendMsg = false;
+    	if(Header_flag)
+    	{
+    		Header_flag = false;
+    		MsgId = LIN_u8GetMsgId(BufferRxFrame.IDMsg);
 
-        	LIN_vSendMsgFrame(Msgs[Index]);
-
-        	asm("NOP");
-        }
+    		for(uint8_t u8i = 0; u8i < TOTAL_MSGS_RX; u8i++)
+    		{
+    			if(MsgId == Msgs[u8i].Id)
+    			{
+    				PRINTF("Respuesta enviada: %s\r\n", Msgs[u8i].Response);
+    				LIN_vTxMsg(Msgs[u8i].Response, sizeof(Msgs[u8i].Response));
+					break;
+    			}
+    		}
+    	}
     }
 }
