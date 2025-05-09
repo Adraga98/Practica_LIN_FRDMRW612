@@ -1,6 +1,7 @@
 component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Copy.o \
  component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Copy.d: \
  ../component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Copy.c \
+ C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\source\mcux_config.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Constants.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Types.h \
@@ -21,7 +22,11 @@ component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Copy.o \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Clear.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Copy.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Set.h \
- C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/internal/mcuxCsslMemory_Internal_Copy_asm.h
+ C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxClMemory\inc/mcuxClMemory_Copy.h \
+ C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\platforms\rw61x/mcuxClConfig.h \
+ C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxClMemory\inc/mcuxClMemory_Types.h \
+ C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxClCore\inc/mcuxClCore_FunctionIdentifiers.h
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\source\mcux_config.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Constants.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Types.h:
@@ -42,4 +47,7 @@ C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Clear.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Copy.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Set.h:
-C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/internal/mcuxCsslMemory_Internal_Copy_asm.h:
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxClMemory\inc/mcuxClMemory_Copy.h:
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\platforms\rw61x/mcuxClConfig.h:
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxClMemory\inc/mcuxClMemory_Types.h:
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxClCore\inc/mcuxClCore_FunctionIdentifiers.h:

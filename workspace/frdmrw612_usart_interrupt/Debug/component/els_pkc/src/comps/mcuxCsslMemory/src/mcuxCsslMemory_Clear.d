@@ -1,6 +1,7 @@
 component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Clear.o \
  component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Clear.d: \
  ../component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Clear.c \
+ C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\source\mcux_config.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslFlowProtection\inc/mcuxCsslFlowProtection.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslCPreProcessor\inc/mcuxCsslAnalysis.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslFlowProtection\inc/mcuxCsslFlowProtection_Impl.h \
@@ -21,6 +22,7 @@ component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Clear.o \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Clear.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Copy.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Set.h
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\source\mcux_config.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslFlowProtection\inc/mcuxCsslFlowProtection.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslCPreProcessor\inc/mcuxCsslAnalysis.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslFlowProtection\inc/mcuxCsslFlowProtection_Impl.h:

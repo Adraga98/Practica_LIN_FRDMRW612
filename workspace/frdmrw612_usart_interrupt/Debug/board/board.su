@@ -1,7 +1,6 @@
 ../board/board.c:283:6:BOARD_SetFlexspiClock	24	static
 ../board/board.c:208:6:BOARD_DeinitFlash	16	static
 ../board/board.c:224:6:BOARD_InitFlash	32	static
-C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\drivers/fsl_flexspi.h:431:20:FLEXSPI_SoftwareReset	16	static
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\drivers/fsl_io_mux.h:1726:20:IO_MUX_SetPinOutLevelInSleep	32	static
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\drivers/fsl_io_mux.h:1778:20:IO_MUX_SetRfPinOutLevelInSleep	24	static
 ../board/board.c:36:6:BOARD_InitDebugConsole	16	static

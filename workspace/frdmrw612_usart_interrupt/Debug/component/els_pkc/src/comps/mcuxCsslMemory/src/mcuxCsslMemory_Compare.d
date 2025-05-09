@@ -1,6 +1,7 @@
 component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Compare.o \
  component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Compare.d: \
  ../component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Compare.c \
+ C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\source\mcux_config.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Constants.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Types.h \
@@ -22,6 +23,7 @@ component/els_pkc/src/comps/mcuxCsslMemory/src/mcuxCsslMemory_Compare.o \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Copy.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Set.h \
  C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/internal/mcuxCsslMemory_Internal_Compare_asm.h
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\source\mcux_config.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Constants.h:
 C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\component\els_pkc\src\comps\mcuxCsslMemory\inc/mcuxCsslMemory_Types.h:

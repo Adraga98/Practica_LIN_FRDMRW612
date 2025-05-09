@@ -1,7 +1,7 @@
-C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\CMSIS/core_cm33.h:2359:22:__NVIC_SetPriorityGrouping	24	static
-C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\CMSIS/core_cm33.h:2378:26:__NVIC_GetPriorityGrouping	4	static
-../drivers/fsl_common_arm.h:804:24:DisableGlobalIRQ	16	static
-../drivers/fsl_common_arm.h:830:20:EnableGlobalIRQ	24	static
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\CMSIS/core_cm33.h:2327:22:__NVIC_SetPriorityGrouping	24	static
+C:\repos\practica_LIN\workspace\frdmrw612_usart_interrupt\CMSIS/core_cm33.h:2346:26:__NVIC_GetPriorityGrouping	4	static
+../drivers/fsl_common_arm.h:897:24:DisableGlobalIRQ	16	static
+../drivers/fsl_common_arm.h:923:20:EnableGlobalIRQ	24	static
 ../drivers/fsl_power.c:567:6:POWER_SetSleepMode	16	static
 ../drivers/fsl_power.c:1062:6:POWER_EnterPowerMode	24	static
 ../drivers/fsl_power.c:1268:6:POWER_DisableGDetVSensors	32	static

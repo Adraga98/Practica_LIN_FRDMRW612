@@ -26,5 +26,7 @@ drivers \
 flash_config \
 source \
 startup \
+utilities/debug_console_lite \
 utilities \
+utilities/str \
 

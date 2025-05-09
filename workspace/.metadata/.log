@@ -26,3 +26,7 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.cdt.core 1 0 2025-05-09 14:00:09.926
 !MESSAGE Indexed 'frdmrw612_usart_interrupt' (34 sources, 133 headers) in 14.3 sec: 10,140 declarations; 393,339 references; 1 unresolved inclusions; 4 syntax errors; 6 unresolved names (0.0015 %)
+
+!ENTRY MCUXpresso IDE 4 -1 2025-05-09 14:29:31.925
+!MESSAGE The SDK 'SDK_2.x_FRDM-RW612' ('24.12.000') for project 'frdmrw612_usart_interrupt' can not be found!
+Version '2.16.100' will be used!
